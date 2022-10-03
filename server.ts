@@ -12,6 +12,7 @@ import {
 } from "./utils/game";
 
 const port = process.env.APP_PORT || 8000;
+const redirect = process.env.REDIRECT_URL?.trim() || 'https://github.com/jessypouliot98';
 
 const app = express();
 
@@ -62,7 +63,9 @@ app.get('/select/:row/:col', async (req, res) => {
   });
   await saveEntry(instanceID, game);
 
-  res.redirect(`${referer}`);
+  console.log({redirect});
+  
+  res.redirect(redirect);
 });
 
 app.listen(port, () => {

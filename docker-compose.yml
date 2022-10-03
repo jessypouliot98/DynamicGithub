@@ -6,6 +6,9 @@ services:
       dockerfile: ./Dockerfile.express
     environment:
       - APP_PORT=3000
+      - REDIRECT_URL=http://localhost:3000/static
     ports:
       - "3000:3000"
+    volumes:
+      - ./:/usr/app/app
     

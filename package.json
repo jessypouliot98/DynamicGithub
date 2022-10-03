@@ -5,7 +5,7 @@
   "author": "Jessy Pouliot <jessy.pouliot@renorun.ca>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node server.ts"
+    "dev": "set REDIRECT_URL=http://localhost:8000/static/index.html && ts-node server.ts"
   },
   "devDependencies": {
     "@types/express": "^4.17.14",

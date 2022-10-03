@@ -1,12 +1,7 @@
 FROM node:lts
 
-WORKDIR /usr/src/app
-
-COPY package.json ./
-COPY yarn.lock ./
+WORKDIR /usr/app/app
 
 RUN yarn install
-
-COPY . .
 
 CMD ["yarn", "dev"]
