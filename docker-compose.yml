@@ -1,0 +1,11 @@
+version: '3'
+services:
+  express:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile.express
+    environment:
+      - APP_PORT=3000
+    ports:
+      - "3000:3000"
+    
